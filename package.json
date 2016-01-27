@@ -1,0 +1,19 @@
+{
+  "name": "lesson3",
+  "version": "1.0.0",
+  "description": "our first app using npm",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XeroX212/comp2016-lesson3.git"
+  },
+  "author": "Varun Chadha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XeroX212/comp2016-lesson3/issues"
+  },
+  "homepage": "https://github.com/XeroX212/comp2016-lesson3#readme"
+}
