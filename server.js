@@ -9,11 +9,13 @@ var app = connect();
 var calculatorMath = function(req, res, next) {
     // get the subtotal from url's querystring
     var qs = url.parse(req.url, true).query;
+    //Setting up the variables to make caluculator work
     var method = qs.method;
     var x = qs.x;
     var y = qs.y;
     var result
-    
+   
+    //Setting up the math
     if (qs.method == 'add') {
         method = '+';
     }else if (qs.method == 'subtract') {
@@ -25,9 +27,9 @@ var calculatorMath = function(req, res, next) {
 	else if (qs.method == 'divide') {
 		method = '/';
 	}
-	// if method does not equal any of the above, it is invalid
+	//Error will pop up if there is not valid method
 	else {
-		method = 'invalid';
+		method = 'Error';
 	}
     
     if (method === '+') {
@@ -39,7 +41,8 @@ var calculatorMath = function(req, res, next) {
     } else if (method === '-'){ 
         result = parseFloat(x) - parseFloat(y);
     } else {
-        result = "Error 404 try again later";
+        //if there is invalid value for method
+        result = "Error 404 try other valid value";
     }
     
     res.writeHead(200, {
