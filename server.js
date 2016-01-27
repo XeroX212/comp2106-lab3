@@ -32,6 +32,7 @@ var calculatorMath = function(req, res, next) {
 		method = 'Error';
 	}
     
+    //Calculation happens here
     if (method === '+') {
        result = parseFloat(x) + parseFloat(y);
     } else if (method === '*') {
